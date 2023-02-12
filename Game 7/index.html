@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .hidden{
+            height: 30vh;
+            width: 15%;
+            background-color: sandybrown;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .hidden .hidden_para{
+            font-size: 22px;
+            color: white;
+        }
+
+
+        .secone{
+            width: 40%;
+            height: 10vh;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .secone .text{
+            width: 30%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+
+        .sectow{
+            width: 40%;
+            height: 10vh;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .sectow .colors{
+            width: 30%;
+            height: 100%;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+    
+
+    </style>
+</head>
+<body>
+
+    <div class="hidden">
+        <p class="hidden_para">Change me :)</p>
+    </div>
+
+    <br><br><br><br>
+
+
+    <section class="secone">
+        <div class="text">Call Me</div>
+        <div class="text">I'm Busy </div>
+        <div class="text"> Hi Dear</div>
+    </section>
+
+
+
+    <br><br><br>
+
+
+    <section class="sectow">
+        <div class="colors" style="background-color: crimson;"></div>
+        <div class="colors" style="background-color: green"></div>
+        <div class="colors" style="background-color: blueviolet"></div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let paragraph = document.querySelector(".hidden .hidden_para")
+
+        let text = document.querySelectorAll(".secone .text")
+
+
+        text.forEach(function(txt){
+            txt.addEventListener("click" , function(){
+                paragraph.innerHTML = txt.innerHTML
+            })
+        })
+
+
+
+
+        let divaya = document.querySelector(".hidden")
+
+        let colors = document.querySelectorAll(".sectow .colors")
+
+
+        colors.forEach(function(col){
+            col.addEventListener("click" , function(){
+            divaya.setAttribute("style" , col.getAttribute("style"));
+            })
+        })
+
+
+    </script>
+    
+</body>
+</html>
